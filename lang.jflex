@@ -45,7 +45,7 @@
   Logico           = "true" | "false"
   Identificador    = [:lowercase:] ( [:letter:] | [:digit:] | "_" )*
   Tipo             = [:uppercase:] ( [:letter:] | [:digit:] | "_" )*
-  LiteralCaractere = "'" ([:letter:] | \n | \t | \b | \r | "\\" ) "'"
+  LiteralCaractere = "'" [:letter:]  "'" | "'" "\\n" "'" | "'" "\\r" "'" | "'" "\\t" "'" | "'" "\\b" "'" | "'" "\\\\" "'"
   ComentarioLinha  = "--" (.)* {FimLinha}
 %state COMMENT
 

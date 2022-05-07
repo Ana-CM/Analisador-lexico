@@ -14,3 +14,20 @@ divmod(num :: Int, div :: Int ) : Int , Int {
     r = num % div;
     return q, r;
 }
+data
+new
+while
+iterate
+read
+null
+==
+!=
+!
+&&
+'a'
+'\t'
+'\\'
+teste_teste
+1.2
+.04
+true
