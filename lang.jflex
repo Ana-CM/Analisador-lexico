@@ -48,7 +48,7 @@
   Logico           = "true" | "false"
   Identificador    = [:lowercase:] ( [:letter:] | [:digit:] | "_" )*
   Tipo             = [:uppercase:] ( [:letter:] | [:digit:] | "_" )*
-  LiteralCaractere = "'" [:letter:]  "'" | "'" "\\n" "'" | "'" "\\r" "'" | "'" "\\t" "'" | "'" "\\b" "'" | "'" "\\\\" "'"
+  LiteralCaractere = "'" (.)  "'" | "'" "\\n" "'" | "'" "\\r" "'" | "'" "\\t" "'" | "'" "\\b" "'" | "'" "\\\\" "'"
   ComentarioLinha  = "--" (.)* {FimLinha}
 %state COMMENT
 
@@ -102,4 +102,4 @@
    [^"-}"]* {                     }
 }
 
-[^] { throw new RuntimeException("Illegal character <"+yytext()+"> at " + yyline + ":" + yycolumn); }
+[^] { throw new RuntimeException("Illegal character <"+yytext()+"> at " + (yyline + 1) + ":" + (yycolumn + 1) ); }
