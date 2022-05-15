@@ -12,5 +12,5 @@ bash build.sh
 ```
 Agora rode o script contendo o nome do arquivo que deverá ser analisado:
 ```
-java Teste _arquivo.extensão_
+java Teste *arquivo.extensão*
 ```
