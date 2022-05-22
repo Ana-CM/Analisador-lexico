@@ -12,10 +12,7 @@
 %type Token
 
 %{
-    /* 
-     * Código arbitrário pode ser inserido diretamente no analisador dessa forma. 
-     * Aqui podemos declarar variáveis e métodos adicionais que julgarmos necessários. 
-     */
+ 
     private int numberTokens;
     
     public int readedTokens(){
@@ -34,7 +31,7 @@
 %}
 
 %init{
-    numberTokens = 0; // Isto é copiado direto no construtor do lexer. 
+    numberTokens = 0;  
 %init}
 
   

@@ -555,10 +555,7 @@ class Lexer {
   private int zzFinalHighSurrogate = 0;
 
   /* user code: */
-    /* 
-     * Código arbitrário pode ser inserido diretamente no analisador dessa forma. 
-     * Aqui podemos declarar variáveis e métodos adicionais que julgarmos necessários. 
-     */
+ 
     private int numberTokens;
     
     public int readedTokens(){
@@ -582,7 +579,7 @@ class Lexer {
    * @param   in  the java.io.Reader to read input from.
    */
   Lexer(java.io.Reader in) {
-      numberTokens = 0; // Isto é copiado direto no construtor do lexer. 
+      numberTokens = 0;  
     this.zzReader = in;
   }
 
